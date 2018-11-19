@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <!-- {{msg}}
+        <div v-html="msg"></div>
+        <div v-bind:title="two">dsadasd</div>
+        <input type="checkbox" v-bind:checked="flag">
+        <input type="checkbox"  v-model="flag">
+        <input type="text" v-model="two" maxlength="20"/>{{20-two.length}} -->
+        <!-- <input type="range" min="0" max="255" v-model="r" />
+        <input type="range" min="0" max="255" v-model="g" />
+        <input type="range" min="0" max="255" v-model="g" />
+        <div class="color" v-bind:style="{width:width+'px',height:height+'px',
+        background:'rgb('+r+','+g+','+b+')'}">aaaaa
+
+        </div> -->
+        <input type="color" v-model="bg" />
+        <div class="color" v-bind:style="{width:width+'px',height:height+'px',
+            background:bg}">aaa</div>
+
+    </div>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+                msg:"<h1>hello</h1>",
+                two:"world",
+                flag:true,
+                width:200,
+                height:200,
+                r:0,
+                g:0,
+                b:0,
+                bg:"#ccc"
+            }
+        })
+           // template:"<p>{{two}}</p>"
+    </script>
+</body>
+</html>
