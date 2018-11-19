@@ -22,6 +22,8 @@
         background:'rgb('+r+','+g+','+b+')'}">aaaaa
 
         </div> -->
+        <input type="number" v-model="width">;
+        <input type="number" v-model="height">;
         <input type="color" v-model="bg" />
         <div class="color" v-bind:style="{width:width+'px',height:height+'px',
             background:bg}">aaa</div>
